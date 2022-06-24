@@ -12,5 +12,6 @@ public interface MyRemote extends Remote {
     원격 메소드의 인자와 리턴값은 반드시 원시 형식(primitive type) 또는 Serializable 형식으로 선언해야 한다.
     모두 네트워크로 전달되어야 하며, 직렬화로 포장됨
      */
+
     String sayHello() throws RemoteException;
 }

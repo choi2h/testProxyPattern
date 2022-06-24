@@ -1,9 +1,13 @@
 package two.change.proxy.book.gof.rmi;
 
+import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
 public class MyRemoteImpl extends UnicastRemoteObject implements MyRemote {
+    /*
+        unicastRemoteObject는 Serializable을 구현하므로 serialVersionUID 필드가 필요하다.
+     */
     private static final long serialVersionUID = 1L;
 
     /*
@@ -18,5 +22,4 @@ public class MyRemoteImpl extends UnicastRemoteObject implements MyRemote {
     public String sayHello() {
         return "Server says, 'Hey'";
     }
-
 }
